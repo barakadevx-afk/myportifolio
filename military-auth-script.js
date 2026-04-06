@@ -8,10 +8,11 @@ class MilitaryMasterAuth {
     }
 
     async init() {
+        console.log('MilitaryMasterAuth: Initializing advanced military cybersecurity platform...');
         this.setupEventListeners();
         this.initializeBackground();
         this.startSecurityMonitoring();
-        console.log('MilitaryMasterAuth: Advanced military cybersecurity platform initialized');
+        console.log('MilitaryMasterAuth: Advanced military cybersecurity platform initialized successfully');
     }
 
     setupEventListeners() {
@@ -22,25 +23,23 @@ class MilitaryMasterAuth {
         window.openSystemDetails = (systemId) => this.openSystemDetails(systemId);
         window.scrollToSection = (sectionId) => this.scrollToSection(sectionId);
         
-        // Add click listeners to all buttons
-        this.addClickListeners();
+        // Add click listeners to all buttons after DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => this.addClickListeners());
+        } else {
+            this.addClickListeners();
+        }
     }
 
     addClickListeners() {
-        // Add click listeners to all buttons
-        document.addEventListener('DOMContentLoaded', () => {
-            const buttons = document.querySelectorAll('.btn');
-            buttons.forEach(button => {
-                button.addEventListener('click', (e) => {
-                    console.log('Military button clicked:', e.target.textContent);
-                    this.handleButtonClick(e);
-                    
-                    // Prevent default behavior if needed
-                    if (button.onclick) {
-                        e.preventDefault();
-                        button.onclick(e);
-                    }
-                });
+        // Add click listeners to all buttons immediately
+        const buttons = document.querySelectorAll('.btn');
+        console.log('Found buttons:', buttons.length);
+        buttons.forEach((button, index) => {
+            console.log(`Button ${index}:`, button.textContent);
+            button.addEventListener('click', (e) => {
+                console.log('Military button clicked:', e.target.textContent);
+                this.handleButtonClick(e);
             });
         });
     }
@@ -96,6 +95,7 @@ class MilitaryMasterAuth {
         if (modal) {
             modal.style.display = 'flex';
             modal.classList.add('active');
+            console.log('Modal found and opened');
         } else {
             console.error('MilitaryMasterAuth: Master modal not found');
         }
