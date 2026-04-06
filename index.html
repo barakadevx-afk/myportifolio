@@ -40,11 +40,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Face Recognition Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.11.0/dist/tf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-detection@0.0.1/dist/face-detection.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapi/face-mesh@1.0.0/dist/face-mesh.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
     <!-- Advanced Cyber Background -->
@@ -54,86 +50,42 @@
         <div class="security-grid" id="security-grid"></div>
     </div>
 
-    <!-- FCE Authentication Modal -->
-    <div class="fce-auth-modal" id="fce-auth-modal">
+    <!-- Authentication Modal -->
+    <div class="auth-modal" id="auth-modal">
         <div class="auth-container">
             <div class="auth-header">
                 <div class="auth-logo">
-                    <img src="https://picsum.photos/seed/barakadevx-military/80/80" alt="FCE Logo" class="logo-image">
-                    <h2>Military FCE System</h2>
-                    <p>Advanced Tactical Biometric Authentication</p>
+                    <i class="fas fa-shield-alt"></i>
+                    <h2>Baraka DevX Military</h2>
+                    <p>Secure Access Portal</p>
                 </div>
             </div>
             
             <div class="auth-content">
-                <div class="face-scanner-section">
-                    <div class="scanner-container">
-                        <video id="face-video" class="face-video" autoplay muted></video>
-                        <canvas id="face-canvas" class="face-canvas"></canvas>
-                        <div class="face-overlay">
-                            <div class="scan-line"></div>
-                            <div class="face-points" id="face-points"></div>
-                            <div class="biometric-data" id="biometric-data">
-                                <div class="data-point">
-                                    <i class="fas fa-fingerprint"></i>
-                                    <span>Facial Points: <span id="point-count">0</span>/68</span>
-                                </div>
-                                <div class="data-point">
-                                    <i class="fas fa-brain"></i>
-                                    <span>Confidence: <span id="confidence-level">0</span>%</span>
-                                </div>
-                                <div class="data-point">
-                                    <i class="fas fa-shield-alt"></i>
-                                    <span>Status: <span id="auth-status">Scanning...</span></span>
-                                </div>
-                            </div>
+                <form class="auth-form" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="username" name="username" required placeholder="Enter username" value="Baraka">
                         </div>
                     </div>
                     
-                    <div class="auth-controls">
-                        <button class="btn btn-primary btn-large" id="start-scan-btn" onclick="startFaceScan()">
-                            <i class="fas fa-camera"></i>
-                            <span>Start Face Scan</span>
-                        </button>
-                        <button class="btn btn-secondary" id="stop-scan-btn" onclick="stopFaceScan()" style="display: none;">
-                            <i class="fas fa-stop"></i>
-                            <span>Stop Scan</span>
-                        </button>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" name="password" required placeholder="Enter password" value="Baraka@2050!!!">
+                        </div>
                     </div>
                     
-                    <div class="auth-progress" id="auth-progress" style="display: none;">
-                        <div class="progress-bar">
-                            <div class="progress-fill" id="progress-fill"></div>
-                        </div>
-                        <div class="progress-text" id="progress-text">Initializing FCE...</div>
-                    </div>
-                </div>
-                
-                <div class="auth-alternative">
-                    <h3>Alternative Authentication</h3>
-                    <form class="auth-form" onsubmit="handleAlternativeAuth(event)">
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <div class="input-wrapper">
-                                <i class="fas fa-user"></i>
-                                <input type="text" id="username" name="username" required placeholder="Enter username">
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <div class="input-wrapper">
-                                <i class="fas fa-lock"></i>
-                                <input type="password" id="password" name="password" required placeholder="Enter password">
-                            </div>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-outline">
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-large">
                             <i class="fas fa-sign-in-alt"></i>
-                            <span>Traditional Login</span>
+                            <span>Access Military Platform</span>
                         </button>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -188,7 +140,7 @@
                 </div>
                 
                 <div class="hero-cta">
-                    <button class="btn btn-primary btn-large" onclick="openFCEAuth()">
+                    <button class="btn btn-primary btn-large" onclick="openAuth()">
                         <i class="fas fa-user-shield"></i>
                         <span>Access Military Platform</span>
                     </button>
@@ -706,6 +658,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="cyber-fce-script.js"></script>
+    <script src="supabase-config.js"></script>
+    <script src="cyber-auth-script.js"></script>
 </body>
 </html>
