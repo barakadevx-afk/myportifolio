@@ -3,71 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RDF Baraka DevX - Rwanda Defence Force Cybersecurity Platform</title>
-    <meta name="description" content="RDF - Rwanda Defence Force cybersecurity platform with advanced authentication, tactical threat intelligence, and next-generation protection for military operations and national security">
-    <meta name="keywords" content="RDF, Rwanda Defence Force, military cybersecurity, defense security, tactical protection, FCE authentication, army cybersecurity, threat detection, national security, Baraka DevX, RDF cybersecurity">
-    <meta name="author" content="RDF Baraka DevX - Rwanda Defence Force">
+    <title>Military Cybersecurity Advanced Platform - Master Defense System</title>
+    <meta name="description" content="Advanced military cybersecurity platform with master defense systems, tactical threat intelligence, next-generation protection for military operations and national security">
+    <meta name="keywords" content="military cybersecurity, defense systems, tactical protection, master security, threat detection, national security, advanced protection, military operations">
+    <meta name="author" content="Military Cybersecurity Division">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="RDF Baraka DevX - Rwanda Defence Force Cybersecurity Platform">
-    <meta property="og:description" content="Rwanda Defence Force cybersecurity platform with FCE authentication, tactical threat intelligence, and advanced protection for military operations and national security">
-    <meta property="og:image" content="https://barakadevx.vercel.app/rdf-og-image.jpg">
+    <meta property="og:title" content="Military Cybersecurity Advanced Platform - Master Defense System">
+    <meta property="og:description" content="Advanced military cybersecurity platform with master defense systems, tactical threat intelligence, and next-generation protection for military operations">
+    <meta property="og:image" content="https://barakadevx.vercel.app/military-master-og-image.jpg">
     <meta property="og:url" content="https://barakadevx.vercel.app">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="RDF Baraka DevX">
+    <meta property="og:site_name" content="Military Cybersecurity Advanced">
     <meta property="og:locale" content="en_US">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@rdfbarakadevx">
-    <meta name="twitter:creator" content="@rdfbarakadevx">
-    <meta name="twitter:title" content="RDF Baraka DevX - Rwanda Defence Force Cybersecurity Platform">
-    <meta name="twitter:description" content="Rwanda Defence Force cybersecurity platform with FCE authentication and tactical threat intelligence">
-    <meta name="twitter:image" content="https://barakadevx.vercel.app/rdf-twitter-image.jpg">
+    <meta name="twitter:site" content="@militarycyberbaraka">
+    <meta name="twitter:creator" content="@militarycyberbaraka">
+    <meta name="twitter:title" content="Military Cybersecurity Advanced Platform - Master Defense System">
+    <meta name="twitter:description" content="Advanced military cybersecurity platform with master defense systems and tactical threat intelligence">
+    <meta name="twitter:image" content="https://barakadevx.vercel.app/military-master-twitter-image.jpg">
     <meta name="theme-color" content="#00ff88">
     <meta name="msapplication-TileColor" content="#00ff88">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="RDF Baraka DevX">
+    <meta name="apple-mobile-web-app-title" content="Military Cybersecurity Advanced">
     <link rel="canonical" href="https://barakadevx.vercel.app">
-    <link rel="alternate" type="application/rss+xml" title="RDF Baraka DevX Security Feed" href="https://barakadevx.vercel.app/rss.xml">
+    <link rel="alternate" type="application/rss+xml" title="Military Security Feed" href="https://barakadevx.vercel.app/rss.xml">
     <link rel="sitemap" type="application/xml" href="https://barakadevx.vercel.app/sitemap.xml">
     
-    <title>RDF Baraka DevX - Rwanda Defence Force Cybersecurity Platform</title>
-    <link rel="stylesheet" href="cyber-styles.css">
-    <link rel="manifest" href="cyber-manifest.json">
+    <title>Military Cybersecurity Advanced Platform - Master Defense System</title>
+    <link rel="stylesheet" href="military-styles.css">
+    <link rel="manifest" href="military-manifest.json">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-    <!-- Advanced Cyber Background -->
-    <div class="cyber-background">
+    <!-- Advanced Military Background -->
+    <div class="military-background">
+        <div class="defense-grid" id="defense-grid"></div>
+        <div class="tactical-overlay" id="tactical-overlay"></div>
         <div class="matrix-rain" id="matrix-rain"></div>
         <div class="neural-network" id="neural-network"></div>
-        <div class="security-grid" id="security-grid"></div>
     </div>
 
-    <!-- Authentication Modal -->
-    <div class="auth-modal" id="auth-modal">
+    <!-- Master Authentication Modal -->
+    <div class="master-auth-modal" id="master-auth-modal">
         <div class="auth-container">
             <div class="auth-header">
                 <div class="auth-logo">
                     <i class="fas fa-shield-alt"></i>
-                    <h2>RDF Defence Force</h2>
-                    <p>National Security Authentication Portal</p>
+                    <h2>Military Master Defense</h2>
+                    <p>Advanced Security Authentication Portal</p>
                 </div>
             </div>
             
             <div class="auth-content">
-                <form class="auth-form" onsubmit="handleLogin(event)">
+                <form class="auth-form" onsubmit="handleMasterLogin(event)">
                     <div class="form-group">
                         <label for="username">Username</label>
                         <div class="input-wrapper">
                             <i class="fas fa-user"></i>
-                            <input type="text" id="username" name="username" required placeholder="Enter username" value="Baraka">
+                            <input type="text" id="username" name="username" required placeholder="Enter master username">
                         </div>
                     </div>
                     
@@ -75,14 +76,27 @@
                         <label for="password">Password</label>
                         <div class="input-wrapper">
                             <i class="fas fa-lock"></i>
-                            <input type="password" id="password" name="password" required placeholder="Enter password" value="Baraka@2050!!!">
+                            <input type="password" id="password" name="password" required placeholder="Enter master password">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="access-level">Access Level</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-user-shield"></i>
+                            <select id="access-level" name="access-level" required>
+                                <option value="operator">System Operator</option>
+                                <option value="commander">Command Center</option>
+                                <option value="administrator">System Administrator</option>
+                                <option value="master">Master Defense</option>
+                            </select>
                         </div>
                     </div>
                     
                     <div class="form-actions">
                         <button type="submit" class="btn btn-primary btn-large">
                             <i class="fas fa-sign-in-alt"></i>
-                            <span>Access Military Platform</span>
+                            <span>Access Master Defense</span>
                         </button>
                     </div>
                 </form>
@@ -95,297 +109,119 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-background">
+                <div class="tactical-pattern" id="tactical-pattern"></div>
+                <div class="defense-overlay" id="defense-overlay"></div>
                 <div class="particles" id="particles"></div>
-                <div class="grid-overlay"></div>
             </div>
             
             <div class="hero-content">
                 <div class="hero-header">
                     <div class="hero-badge">
                         <i class="fas fa-shield-alt"></i>
-                        <span>RDF National Security</span>
+                        <span>Master Defense System</span>
                     </div>
-                    <h1 class="glitch">RDF Baraka DevX</h1>
-                    <p class="hero-subtitle">Rwanda Defence Force Cybersecurity Platform with Advanced Authentication</p>
+                    <h1 class="glitch">Military Cybersecurity</h1>
+                    <p class="hero-subtitle">Advanced Military Cybersecurity Platform with Master Defense Systems</p>
                 </div>
                 
                 <div class="hero-stats">
                     <div class="stat-item">
                         <div class="stat-icon">
-                            <i class="fas fa-fingerprint"></i>
+                            <i class="fas fa-shield-alt"></i>
                         </div>
                         <div class="stat-content">
-                            <span class="stat-number">99.9</span>
+                            <span class="stat-number">100</span>
                             <span class="stat-label">Security Score</span>
                         </div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-icon">
-                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-server"></i>
                         </div>
                         <div class="stat-content">
-                            <span class="stat-number">0.3s</span>
-                            <span class="stat-label">Face Recognition</span>
+                            <span class="stat-number">50</span>
+                            <span class="stat-label">Defense Systems</span>
                         </div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-icon">
-                            <i class="fas fa-shield-alt"></i>
+                            <i class="fas fa-lock"></i>
                         </div>
                         <div class="stat-content">
-                            <span class="stat-number">256-bit</span>
+                            <span class="stat-number">512-bit</span>
                             <span class="stat-label">Encryption</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Operations</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="hero-cta">
-                    <button class="btn btn-primary btn-large" onclick="testButton()">
+                    <button class="btn btn-primary btn-large" onclick="openMasterAuth()">
                         <i class="fas fa-user-shield"></i>
-                        <span>Test RDF System</span>
-                    </button>
-                    <button class="btn btn-primary btn-large" onclick="openAuth()">
-                        <i class="fas fa-user-shield"></i>
-                        <span>Access RDF Platform</span>
+                        <span>Access Master Defense</span>
                     </button>
                 </div>
             </div>
         </section>
 
-        <!-- Security Dashboard -->
-        <section class="security-dashboard">
+        <!-- Master Defense Dashboard -->
+        <section class="master-dashboard">
             <div class="container">
-                <h2 class="section-title">RDF Command Center</h2>
+                <h2 class="section-title">Master Defense Command Center</h2>
                 <div class="dashboard-grid">
                     <div class="dashboard-card">
                         <div class="card-header">
                             <i class="fas fa-fingerprint"></i>
-                            <h3>National Biometric Status</h3>
+                            <h3>Authentication Status</h3>
                         </div>
                         <div class="card-content">
-                            <div class="status-indicator online" id="bio-status"></div>
-                            <p>RDF Authentication System Active</p>
-                        </div>
-                    </div>
-                                <div class="dashboard-card">
-                        <div class="card-header">
-                            <i class="fas fa-users"></i>
-                            <h3>Active Personnel</h3>
-                        </div>
-                        <div class="card-content">
-                            <span class="big-number" id="active-sessions">0</span>
-                            <p>Authenticated RDF Operators</p>
-                            <div class="card-actions">
-                                <button class="btn btn-outline" onclick="openProjectDetails('rdf-dashboard')">
-                                    <i class="fas fa-eye"></i>
-                                    <span>View Details</span>
-                                </button>
-                                <a href="#" class="btn btn-primary">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>RDF Command Center</span>
-                                </a>
-                            </div>
+                            <div class="status-indicator online" id="auth-status"></div>
+                            <p>Master Defense System Active</p>
                         </div>
                     </div>
                     
                     <div class="dashboard-card">
                         <div class="card-header">
                             <i class="fas fa-shield-alt"></i>
-                            <h3>National Defense Level</h3>
+                            <h3>Defense Level</h3>
                         </div>
                         <div class="card-content">
                             <div class="security-level">
                                 <div class="level-bar">
-                                    <div class="level-fill" style="width: 99%;"></div>
+                                    <div class="level-fill" style="width: 100%;"></div>
                                 </div>
                                 <span>Maximum</span>
                             </div>
                         </div>
                     </div>
-
-                    <div class="portfolio-item" data-category="mobile">
-                        <div class="portfolio-image">
-                            <div class="project-overlay">
-                                <div class="project-tech">
-                                    <span class="tech-tag">React Native</span>
-                                    <span class="tech-tag">Redux</span>
-                                    <span class="tech-tag">AWS</span>
-                                </div>
-                            </div>
-                            <div class="project-number">03</div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <i class="fas fa-server"></i>
+                            <h3>Active Systems</h3>
                         </div>
-                        <div class="portfolio-content">
-                            <h3>Mobile Security Scanner</h3>
-                            <p>Cross-platform mobile application for on-the-go security scanning and vulnerability assessment.</p>
-                            <div class="project-stats">
-                                <div class="stat">
-                                    <i class="fas fa-download"></i>
-                                    <span>100K+ Downloads</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-mobile-alt"></i>
-                                    <span>iOS & Android</span>
-                                </div>
-                            </div>
-                            <div class="project-actions">
-                                <button class="btn btn-outline" onclick="openProjectDetails('mobile-scanner')">
-                                    <i class="fas fa-eye"></i> View Details
-                                </button>
-                                <a href="#" class="btn btn-primary">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item" data-category="ai">
-                        <div class="portfolio-image">
-                            <div class="project-overlay">
-                                <div class="project-tech">
-                                    <span class="tech-tag">JavaScript</span>
-                                    <span class="tech-tag">TensorFlow</span>
-                                    <span class="tech-tag">Docker</span>
-                                </div>
-                            </div>
-                            <div class="project-number">04</div>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3>AI-Powered Security Bot</h3>
-                            <p>Intelligent chatbot for security assistance, threat analysis, and automated incident response.</p>
-                            <div class="project-stats">
-                                <div class="stat">
-                                    <i class="fas fa-robot"></i>
-                                    <span>95% Accuracy</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-comments"></i>
-                                    <span>1M+ Interactions</span>
-                                </div>
-                            </div>
-                            <div class="project-actions">
-                                <button class="btn btn-outline" onclick="openProjectDetails('ai-security-bot')">
-                                    <i class="fas fa-eye"></i> View Details
-                                </button>
-                                <a href="#" class="btn btn-primary">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item" data-category="cybersecurity">
-                        <div class="portfolio-image">
-                            <div class="project-overlay">
-                                <div class="project-tech">
-                                    <span class="tech-tag">Go</span>
-                                    <span class="tech-tag">Kubernetes</span>
-                                    <span class="tech-tag">PostgreSQL</span>
-                                </div>
-                            </div>
-                            <div class="project-number">05</div>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3>Network Security Gateway</h3>
-                            <p>High-performance network security solution with advanced filtering and DDoS protection.</p>
-                            <div class="project-stats">
-                                <div class="stat">
-                                    <i class="fas fa-tachometer-alt"></i>
-                                    <span>10Gbps Speed</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-network-wired"></i>
-                                    <span>Zero Latency</span>
-                                </div>
-                            </div>
-                            <div class="project-actions">
-                                <button class="btn btn-outline" onclick="openProjectDetails('network-gateway')">
-                                    <i class="fas fa-eye"></i> View Details
-                                </button>
-                                <a href="#" class="btn btn-primary">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item" data-category="web">
-                        <div class="portfolio-image">
-                            <div class="project-overlay">
-                                <div class="project-tech">
-                                    <span class="tech-tag">Next.js</span>
-                                    <span class="tech-tag">GraphQL</span>
-                                    <span class="tech-tag">Redis</span>
-                                </div>
-                            </div>
-                            <div class="project-number">06</div>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3>Vulnerability Management Platform</h3>
-                            <p>Comprehensive vulnerability assessment and management platform for enterprise security teams.</p>
-                            <div class="project-stats">
-                                <div class="stat">
-                                    <i class="fas fa-bug"></i>
-                                    <span>5000+ Scans</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-clock"></i>
-                                    <span>24/7 Monitoring</span>
-                                </div>
-                            </div>
-                            <div class="project-actions">
-                                <button class="btn btn-outline" onclick="openProjectDetails('vulnerability-platform')">
-                                    <i class="fas fa-eye"></i> View Details
-                                </button>
-                                <a href="#" class="btn btn-primary">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Security Tools Section -->
-        <section id="tools" class="tools">
-            <header class="section-header">
-                <h2 class="section-title">DevX Security Arsenal</h2>
-                <p class="section-description">Advanced cybersecurity tools for comprehensive digital protection and threat mitigation</p>
-            </header>
-                <div class="tools-grid">
-                    <div class="tool-card" onclick="openPasswordGenerator()">
-                        <div class="tool-icon">
-                            <i class="fas fa-key"></i>
-                        </div>
-                        <h3>Password Generator</h3>
-                        <p>Create strong, secure passwords with advanced encryption</p>
-                        <div class="tool-features">
-                            <span><i class="fas fa-check"></i> Customizable</span>
-                            <span><i class="fas fa-check"></i> High Entropy</span>
+                        <div class="card-content">
+                            <span class="big-number" id="active-systems">12</span>
+                            <p>Defense Systems Online</p>
                         </div>
                     </div>
                     
-                    <div class="tool-card" onclick="openPasswordChecker()">
-                        <div class="tool-icon">
-                            <i class="fas fa-lock"></i>
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <i class="fas fa-users"></i>
+                            <h3>Active Operators</h3>
                         </div>
-                        <h3>Password Strength Checker</h3>
-                        <p>Analyze password strength and get improvement suggestions</p>
-                        <div class="tool-features">
-                            <span><i class="fas fa-check"></i> Real-time Analysis</span>
-                            <span><i class="fas fa-check"></i> Security Tips</span>
-                        </div>
-                    </div>
-                    
-                    <div class="tool-card" onclick="openEncoder()">
-                        <div class="tool-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3>Encoder/Decoder</h3>
-                        <p>Encode and decode text using various encryption methods</p>
-                        <div class="tool-features">
-                            <span><i class="fas fa-check"></i> Multiple Formats</span>
-                            <span><i class="fas fa-check"></i> Base64, Hex, Binary</span>
+                        <div class="card-content">
+                            <span class="big-number" id="active-operators">0</span>
+                            <p>Authenticated Personnel</p>
                         </div>
                     </div>
                     
