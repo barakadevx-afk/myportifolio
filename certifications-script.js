@@ -172,7 +172,7 @@ class CertificationsPlatform {
                 avgSalary: 95000,
                 courses: [
                     'Linux Fundamentals',
-                    'Python for Security',
+                    'JavaScript for Security',
                     'CEH Certification',
                     'OSCP Preparation'
                 ],

@@ -264,7 +264,7 @@ class RwandaPlatform {
                 type: 'Full-time',
                 salary: 'RWF 800,000 - 1,200,000',
                 description: 'Looking for experienced software developers to join our team.',
-                requirements: ['3+ years experience', 'JavaScript/Python knowledge', 'Problem-solving skills'],
+                requirements: ['3+ years experience', 'JavaScript knowledge', 'Problem-solving skills'],
                 posted: '2 days ago',
                 deadline: '2024-02-15'
             },

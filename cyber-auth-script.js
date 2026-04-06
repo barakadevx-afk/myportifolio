@@ -33,6 +33,12 @@ class MilitaryAuth {
                 button.addEventListener('click', (e) => {
                     console.log('Button clicked:', e.target.textContent);
                     this.handleButtonClick(e);
+                    
+                    // Prevent default behavior if needed
+                    if (button.onclick) {
+                        e.preventDefault();
+                        button.onclick(e);
+                    }
                 });
             });
         });
