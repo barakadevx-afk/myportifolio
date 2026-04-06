@@ -38,6 +38,67 @@ class CyberFCE {
         window.openProjectDetails = (projectId) => this.openProjectDetails(projectId);
         window.scrollToSection = (sectionId) => this.scrollToSection(sectionId);
         window.closeModal = (modalId) => this.closeModal(modalId);
+        
+        // Add click listeners to all buttons
+        this.addClickListeners();
+    }
+
+    addClickListeners() {
+        // Add click listeners to all buttons
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    console.log('Button clicked:', e.target.textContent);
+                    this.handleButtonClick(e);
+                });
+            });
+        });
+    }
+
+    handleButtonClick(event) {
+        // Add visual feedback
+        const button = event.target.closest('.btn');
+        if (button) {
+            // Add ripple effect
+            this.createRippleEffect(button);
+            
+            // Add haptic feedback simulation
+            if (navigator.vibrate) {
+                navigator.vibrate(50);
+            }
+        }
+    }
+
+    createRippleEffect(button) {
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple';
+        
+        const rect = button.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = event.clientX - rect.left - size / 2;
+        const y = event.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.style.transform = 'scale(0)';
+        ripple.style.opacity = '1';
+        
+        button.appendChild(ripple);
+        
+        // Animate ripple
+        setTimeout(() => {
+            ripple.style.transform = 'scale(4)';
+            ripple.style.opacity = '0';
+        }, 10);
+        
+        // Remove ripple after animation
+        setTimeout(() => {
+            if (ripple.parentNode) {
+                ripple.parentNode.removeChild(ripple);
+            }
+        }, 600);
     }
 
     closeModal(modalId) {
@@ -55,10 +116,14 @@ class CyberFCE {
     }
 
     openFCEAuth() {
+        console.log('FCE: openFCEAuth called');
         const modal = document.getElementById('fce-auth-modal');
         if (modal) {
+            console.log('FCE: Modal found, displaying');
             modal.style.display = 'flex';
             this.startFaceScan();
+        } else {
+            console.error('FCE: Modal not found');
         }
     }
 
@@ -448,9 +513,14 @@ class CyberFCE {
 // Initialize FCE platform
 const cyberFCE = new CyberFCE();
 
+// Initialize FCE platform
+const cyberFCE = new CyberFCE();
+
 // Make functions globally accessible
 window.startFaceScan = () => cyberFCE.startFaceScan();
 window.stopFaceScan = () => cyberFCE.stopFaceScan();
 window.openFCEAuth = () => cyberFCE.openFCEAuth();
 window.handleAlternativeAuth = (event) => cyberFCE.handleAlternativeAuth(event);
 window.openProjectDetails = (projectId) => cyberFCE.openProjectDetails(projectId);
+window.scrollToSection = (sectionId) => cyberFCE.scrollToSection(sectionId);
+window.closeModal = (modalId) => cyberFCE.closeModal(modalId);
