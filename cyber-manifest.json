@@ -1,0 +1,26 @@
+{
+    "name": "Baraka DevX",
+    "short_name": "DevX",
+    "description": "Baraka DevX - Next-generation cybersecurity platform for digital transformation with advanced security tools, threat intelligence, and enterprise protection",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#0a0a0a",
+    "theme_color": "#00ff88",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "categories": ["security", "utilities", "productivity", "development", "business"],
+    "lang": "en",
+    "scope": "/",
+    "prefer_related_applications": false
+}
