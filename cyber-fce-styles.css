@@ -3,6 +3,9 @@
     --primary-color: #00ff88;
     --secondary-color: #4a00e0;
     --accent-color: #ff6b35;
+    --military-primary: #1a1a2a;
+    --military-secondary: #2d3748;
+    --military-accent: #ff4444;
     --dark-bg: #0a0a0a;
     --card-bg: rgba(255, 255, 255, 0.05);
     --text-primary: #ffffff;
@@ -14,6 +17,8 @@
     --shadow-lg: 0 0 60px rgba(0, 255, 136, 0.2);
     --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     --gradient-accent: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    --military-gradient: linear-gradient(135deg, var(--military-primary), var(--military-secondary));
+    --military-gradient-accent: linear-gradient(135deg, var(--military-accent), var(--military-primary));
 }
 
 * {
@@ -347,7 +352,7 @@ body {
 }
 
 .btn-primary {
-    background: var(--gradient-primary);
+    background: var(--military-gradient);
     color: var(--dark-bg);
     box-shadow: var(--shadow-primary);
 }
@@ -358,13 +363,13 @@ body {
 }
 
 .btn-secondary {
-    background: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    background: var(--military-gradient-accent);
+    color: var(--dark-bg);
+    border: 2px solid var(--military-primary);
 }
 
 .btn-secondary:hover {
-    background: rgba(0, 255, 136, 0.1);
+    background: rgba(26, 55, 88, 0.1);
     transform: translateY(-2px);
 }
 

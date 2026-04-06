@@ -1,5 +1,5 @@
-// Baraka DevX - Advanced Cybersecurity Platform with FCE Authentication
-class CyberFCE {
+// Baraka DevX - Advanced Military Cybersecurity Platform with FCE Authentication
+class MilitaryCyberFCE {
     constructor() {
         this.isScanning = false;
         this.faceModel = null;
@@ -8,6 +8,7 @@ class CyberFCE {
         this.confidenceThreshold = 0.85;
         this.maxRetries = 3;
         this.currentRetry = 0;
+        this.militaryMode = true;
         this.init();
     }
 
@@ -16,6 +17,7 @@ class CyberFCE {
         this.setupEventListeners();
         this.initializeBackground();
         this.startSecurityMonitoring();
+        console.log('Military CyberFCE: Advanced military cybersecurity platform initialized');
     }
 
     async loadFaceModel() {
@@ -510,17 +512,5 @@ class CyberFCE {
     }
 }
 
-// Initialize FCE platform
-const cyberFCE = new CyberFCE();
-
-// Initialize FCE platform
-const cyberFCE = new CyberFCE();
-
-// Make functions globally accessible
-window.startFaceScan = () => cyberFCE.startFaceScan();
-window.stopFaceScan = () => cyberFCE.stopFaceScan();
-window.openFCEAuth = () => cyberFCE.openFCEAuth();
-window.handleAlternativeAuth = (event) => cyberFCE.handleAlternativeAuth(event);
-window.openProjectDetails = (projectId) => cyberFCE.openProjectDetails(projectId);
-window.scrollToSection = (sectionId) => cyberFCE.scrollToSection(sectionId);
-window.closeModal = (modalId) => cyberFCE.closeModal(modalId);
+// Initialize Military FCE platform
+const militaryCyberFCE = new MilitaryCyberFCE();
