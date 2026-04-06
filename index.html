@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Baraka DevX - Next-generation cybersecurity platform for digital transformation with advanced security tools, threat intelligence, and enterprise protection for modern organizations">
-    <meta name="keywords" content="cybersecurity, security tools, threat detection, network security, password generator, security scanner, IP checker, hash generator, SSL checker, digital protection, enterprise security, cybersecurity platform, Baraka DevX">
+    <title>Baraka DevX - Advanced Cybersecurity Platform with FCE Authentication</title>
+    <meta name="description" content="Advanced cybersecurity platform with Face Recognition Engine (FCE) authentication, biometric security, and next-generation protection for modern enterprises">
+    <meta name="keywords" content="cybersecurity, face recognition, FCE, biometric authentication, security tools, threat detection, enterprise security">
     <meta name="author" content="Baraka DevX">
     <meta name="robots" content="index, follow">
-    <meta name="google-site-verification" content="8G1YM1RUHxlqBGzmV0gQj_vQqd26YlK--nyFGihCzQM" />
-    <meta property="og:title" content="Baraka DevX - Next-Generation Cybersecurity Platform">
-    <meta property="og:description" content="Advanced cybersecurity platform driving digital transformation with cutting-edge tools, real-time threat intelligence, and enterprise-grade protection for modern organizations">
-    <meta property="og:image" content="https://barakadevx.com/og-image.jpg">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Baraka DevX - Advanced Cybersecurity Platform with FCE">
+    <meta property="og:description" content="Next-generation cybersecurity platform with Face Recognition Engine authentication and advanced biometric security">
+    <meta property="og:image" content="https://barakadevx.vercel.app/og-image.jpg">
     <meta property="og:url" content="https://barakadevx.vercel.app">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Baraka DevX">
     <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@barakadevx">
     <meta name="twitter:creator" content="@barakadevx">
-    <meta name="twitter:title" content="Baraka DevX - Next-Generation Cybersecurity Platform">
-    <meta name="twitter:description" content="Advanced cybersecurity platform with cutting-edge security tools and threat intelligence">
+    <meta name="twitter:title" content="Baraka DevX - Advanced Cybersecurity Platform with FCE">
+    <meta name="twitter:description" content="Advanced cybersecurity platform with Face Recognition Engine authentication">
     <meta name="twitter:image" content="https://barakadevx.vercel.app/twitter-image.jpg">
     <meta name="theme-color" content="#00ff88">
     <meta name="msapplication-TileColor" content="#00ff88">
@@ -29,100 +33,90 @@
     <link rel="canonical" href="https://barakadevx.vercel.app">
     <link rel="alternate" type="application/rss+xml" title="Baraka DevX Security Feed" href="https://barakadevx.vercel.app/rss.xml">
     <link rel="sitemap" type="application/xml" href="https://barakadevx.vercel.app/sitemap.xml">
-    <title>Baraka DevX - Next-Generation Cybersecurity Platform</title>
+    
+    <title>Baraka DevX - Advanced Cybersecurity Platform with FCE Authentication</title>
     <link rel="stylesheet" href="cyber-styles.css">
     <link rel="manifest" href="cyber-manifest.json">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- Face Recognition Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.11.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-detection@0.0.1/dist/face-detection.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapi/face-mesh@1.0.0/dist/face-mesh.min.js"></script>
 </head>
 <body>
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Baraka DevX",
-        "alternateName": "DevX",
-        "url": "https://barakadevx.vercel.app",
-        "description": "Next-generation cybersecurity platform for digital transformation with advanced security tools, threat intelligence, and enterprise protection for modern organizations",
-        "potentialAction": [
-            {
-                "@type": "SearchAction",
-                "target": "https://barakadevx.vercel.app/search?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-            }
-        ],
-        "mainEntity": {
-            "@type": "Organization",
-            "name": "Baraka DevX",
-            "url": "https://barakadevx.vercel.app",
-            "logo": "https://barakadevx.vercel.app/logo.png",
-            "description": "Advanced cybersecurity platform driving digital transformation",
-            "sameAs": [
-                "https://barakadevx.vercel.app",
-                "https://twitter.com/barakadevx",
-                "https://linkedin.com/company/barakadevx",
-                "https://github.com/barakadevx"
-            ],
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-555-CYBER",
-                "contactType": "customer service",
-                "availableLanguage": ["English"],
-                "email": "contact@barakadevx.com"
-            }
-        },
-        "creator": {
-            "@type": "Person",
-            "name": "Baraka DevX Team",
-            "jobTitle": "Cybersecurity Experts",
-            "url": "https://barakadevx.com/about"
-        }
-    }
-    </script>
-    
-    <!-- Matrix Rain Background -->
-    <canvas id="matrix-bg"></canvas>
-    
-    <!-- Login Modal -->
-    <div class="login-modal" id="login-modal">
-        <div class="login-container">
-            <div class="login-header">
-                <div class="login-logo">
-                    <i class="fas fa-shield-alt"></i>
-                    <h2>Baraka DevX</h2>
-                    <p>Secure Access Portal</p>
+    <!-- Advanced Cyber Background -->
+    <div class="cyber-background">
+        <div class="matrix-rain" id="matrix-rain"></div>
+        <div class="neural-network" id="neural-network"></div>
+        <div class="security-grid" id="security-grid"></div>
+    </div>
+
+    <!-- FCE Authentication Modal -->
+    <div class="fce-auth-modal" id="fce-auth-modal">
+        <div class="auth-container">
+            <div class="auth-header">
+                <div class="auth-logo">
+                    <img src="https://picsum.photos/seed/barakadevx-fce/80/80" alt="FCE Logo" class="logo-image">
+                    <h2>Face Recognition Engine</h2>
+                    <p>Advanced Biometric Authentication</p>
                 </div>
             </div>
             
-            <div class="login-content">
-                <div class="eye-auth-section">
-                    <div class="eye-scanner">
-                        <div class="scanner-ring">
-                            <div class="scanner-dot"></div>
-                            <div class="scanner-wave"></div>
-                        </div>
-                        <div class="eye-icon">
-                            <i class="fas fa-eye"></i>
+            <div class="auth-content">
+                <div class="face-scanner-section">
+                    <div class="scanner-container">
+                        <video id="face-video" class="face-video" autoplay muted></video>
+                        <canvas id="face-canvas" class="face-canvas"></canvas>
+                        <div class="face-overlay">
+                            <div class="scan-line"></div>
+                            <div class="face-points" id="face-points"></div>
+                            <div class="biometric-data" id="biometric-data">
+                                <div class="data-point">
+                                    <i class="fas fa-fingerprint"></i>
+                                    <span>Facial Points: <span id="point-count">0</span>/68</span>
+                                </div>
+                                <div class="data-point">
+                                    <i class="fas fa-brain"></i>
+                                    <span>Confidence: <span id="confidence-level">0</span>%</span>
+                                </div>
+                                <div class="data-point">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Status: <span id="auth-status">Scanning...</span></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <h3>Biometric Eye Authentication</h3>
-                    <p>Look directly at the camera for secure authentication</p>
-                    <div class="scan-status" id="scan-status">
-                        <span class="status-text">Initializing scanner...</span>
-                        <div class="status-indicator"></div>
+                    
+                    <div class="auth-controls">
+                        <button class="btn btn-primary btn-large" id="start-scan-btn" onclick="startFaceScan()">
+                            <i class="fas fa-camera"></i>
+                            <span>Start Face Scan</span>
+                        </button>
+                        <button class="btn btn-secondary" id="stop-scan-btn" onclick="stopFaceScan()" style="display: none;">
+                            <i class="fas fa-stop"></i>
+                            <span>Stop Scan</span>
+                        </button>
+                    </div>
+                    
+                    <div class="auth-progress" id="auth-progress" style="display: none;">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <div class="progress-text" id="progress-text">Initializing FCE...</div>
                     </div>
                 </div>
                 
-                <div class="login-form">
-                    <form id="login-form">
+                <div class="auth-alternative">
+                    <h3>Alternative Authentication</h3>
+                    <form class="auth-form" onsubmit="handleAlternativeAuth(event)">
                         <div class="form-group">
-                            <label for="username">Username or Email</label>
+                            <label for="username">Username</label>
                             <div class="input-wrapper">
                                 <i class="fas fa-user"></i>
-                                <input type="text" id="username" name="username" required>
+                                <input type="text" id="username" name="username" required placeholder="Enter username">
                             </div>
                         </div>
                         
@@ -130,25 +124,13 @@
                             <label for="password">Password</label>
                             <div class="input-wrapper">
                                 <i class="fas fa-lock"></i>
-                                <input type="password" id="password" name="password" required>
+                                <input type="password" id="password" name="password" required placeholder="Enter password">
                             </div>
                         </div>
                         
-                        <div class="form-options">
-                            <label class="checkbox-wrapper">
-                                <input type="checkbox" id="remember-me" name="remember-me">
-                                <span class="checkmark"></span>
-                                <span class="label-text">Remember me</span>
-                            </label>
-                            <a href="#" class="forgot-password">Forgot password?</a>
-                        </div>
-                        
-                        <button type="submit" class="login-btn" id="login-btn">
-                            <span class="btn-content">
-                                <i class="fas fa-sign-in-alt"></i>
-                                <span>Secure Login</span>
-                            </span>
-                            <div class="btn-glow"></div>
+                        <button type="submit" class="btn btn-outline">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>Traditional Login</span>
                         </button>
                     </form>
                 </div>
@@ -156,441 +138,111 @@
         </div>
     </div>
 
-    <!-- User Profile Modal -->
-    <div class="profile-modal" id="profile-modal">
-        <div class="profile-container">
-            <div class="profile-header">
-                <div class="profile-avatar">
-                    <img src="https://picsum.photos/seed/user-avatar/100/100" alt="User Avatar" id="user-avatar">
-                    <div class="avatar-status online"></div>
-                </div>
-                <div class="profile-info">
-                    <h3 id="user-name">John Doe</h3>
-                    <p id="user-role">Security Analyst</p>
-                    <div class="user-badges">
-                        <span class="badge premium">Premium</span>
-                        <span class="badge verified">Verified</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="profile-content">
-                <div class="profile-stats">
-                    <div class="stat-item">
-                        <i class="fas fa-award"></i>
-                        <div class="stat-info">
-                            <span class="stat-number">12</span>
-                            <span class="stat-label">Certifications</span>
-                        </div>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-clock"></i>
-                        <div class="stat-info">
-                            <span class="stat-number">250</span>
-                            <span class="stat-label">Hours Learned</span>
-                        </div>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-trophy"></i>
-                        <div class="stat-info">
-                            <span class="stat-number">95%</span>
-                            <span class="stat-label">Success Rate</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="profile-actions">
-                    <button class="btn btn-primary" onclick="editProfile()">
-                        <i class="fas fa-edit"></i>
-                        <span>Edit Profile</span>
-                    </button>
-                    <button class="btn btn-outline" onclick="viewCertificates()">
-                        <i class="fas fa-certificate"></i>
-                        <span>My Certificates</span>
-                    </button>
-                    <button class="btn btn-secondary" onclick="logout()">
-                        <i class="fas fa-sign-out-alt"></i>
-                        <span>Logout</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Floating Login Button -->
-    <button class="floating-login-btn" id="floating-login-btn" onclick="openLoginModal()">
-        <i class="fas fa-user-shield"></i>
-        <span>Login</span>
-    </button>
-
-    <!-- User Menu (when logged in) -->
-    <div class="user-menu" id="user-menu" style="display: none;">
-        <div class="user-avatar-small" onclick="openProfileModal()">
-            <img src="https://picsum.photos/seed/user-avatar/50/50" alt="User" id="user-avatar-small">
-            <div class="online-indicator"></div>
-        </div>
-        <div class="user-dropdown">
-            <button class="user-menu-item" onclick="openProfileModal()">
-                <i class="fas fa-user"></i>
-                <span>Profile</span>
-            </button>
-            <button class="user-menu-item" onclick="viewCertificates()">
-                <i class="fas fa-certificate"></i>
-                <span>Certificates</span>
-            </button>
-            <button class="user-menu-item" onclick="openSettings()">
-                <i class="fas fa-cog"></i>
-                <span>Settings</span>
-            </button>
-            <button class="user-menu-item logout-item" onclick="logout()">
-                <i class="fas fa-sign-out-alt"></i>
-                <span>Logout</span>
-            </button>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <a href="#home" class="nav-logo">
-                    <img src="https://picsum.photos/seed/barakadevx-logo/200/60" alt="Baraka DevX Logo" class="logo-image">
-                    <span>Baraka DevX</span>
-                </a>
-                
-                <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                    <li><a href="#tools" class="nav-link">Security Tools</a></li>
-                    <li><a href="certifications.html" class="nav-link">Certifications</a></li>
-                    <li><a href="#news" class="nav-link">Threat Intelligence</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-                
-                <div class="nav-actions">
-                    <button class="theme-toggle" id="theme-toggle">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
-
     <!-- Main Content -->
-    <main>
+    <main class="main-content">
         <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-particles" id="hero-particles"></div>
-            <div class="hero-grid-overlay"></div>
-            <div class="hero-content">
-                <header class="hero-header">
-                    <div class="hero-badge">
-                        <i class="fas fa-rocket"></i>
-                        <span>Next-Gen Platform</span>
-                    </div>
-                    <h1 class="glitch" data-text="Baraka DevX - Advanced Cybersecurity Excellence">
-                        <span class="glitch-text">Baraka DevX</span>
-                        <span class="glitch-text">Baraka DevX</span>
-                        <span class="glitch-text">Baraka DevX</span>
-                        <span class="hero-subtitle">Advanced Cybersecurity Excellence</span>
-                    </h1>
-                    <p class="hero-description">Next-generation cybersecurity platform driving digital transformation with cutting-edge tools, real-time threat intelligence, and enterprise-grade protection for modern organizations</p>
-                    <div class="hero-keywords">
-                        <span class="keyword">Cybersecurity</span>
-                        <span class="keyword">Threat Intelligence</span>
-                        <span class="keyword">Digital Protection</span>
-                        <span class="keyword">Enterprise Security</span>
-                    </div>
-                </header>
-                
-                <div class="hero-stats-container">
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <div class="stat-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div class="stat-content">
-                                <span class="stat-number" data-target="99.9">0</span>
-                                <span class="stat-label">% Protection</span>
-                                <div class="stat-progress">
-                                    <div class="progress-fill"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-icon">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                            <div class="stat-content">
-                                <span class="stat-number" data-target="24">0</span>
-                                <span class="stat-label">/7 Monitoring</span>
-                                <div class="stat-progress">
-                                    <div class="progress-fill"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="stat-content">
-                                <span class="stat-number" data-target="50000">0</span>
-                                <span class="stat-label">Users Protected</span>
-                                <div class="stat-progress">
-                                    <div class="progress-fill"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-icon">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                            <div class="stat-content">
-                                <span class="stat-number" data-target="150">0</span>
-                                <span class="stat-label">Countries</span>
-                                <div class="stat-progress">
-                                    <div class="progress-fill"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="hero-actions">
-                    <button class="btn btn-primary btn-large" onclick="scrollToSection('portfolio')">
-                        <span class="btn-content">
-                            <i class="fas fa-briefcase"></i>
-                            <span>View Portfolio</span>
-                        </span>
-                        <div class="btn-glow"></div>
-                    </button>
-                    <button class="btn btn-outline btn-large" onclick="scrollToSection('tools')">
-                        <span class="btn-content">
-                            <i class="fas fa-tools"></i>
-                            <span>Explore Tools</span>
-                        </span>
-                        <div class="btn-glow"></div>
-                    </button>
-                    <button class="btn btn-secondary btn-large" onclick="scrollToSection('contact')">
-                        <span class="btn-content">
-                            <i class="fas fa-envelope"></i>
-                            <span>Get Started</span>
-                        </span>
-                        <div class="btn-glow"></div>
-                    </button>
-                </div>
+        <section class="hero">
+            <div class="hero-background">
+                <div class="particles" id="particles"></div>
+                <div class="grid-overlay"></div>
             </div>
             
-            <div class="hero-visual">
-                <div class="rotating-elements">
-                    <div class="rotating-shield shield-1 floating-3d">
-                        <i class="fas fa-shield-alt"></i>
+            <div class="hero-content">
+                <div class="hero-header">
+                    <div class="hero-badge">
+                        <i class="fas fa-brain"></i>
+                        <span>FCE-Powered Security</span>
                     </div>
-                    <div class="rotating-shield shield-2 floating-3d">
-                        <i class="fas fa-lock"></i>
+                    <h1 class="glitch">Baraka DevX</h1>
+                    <p class="hero-subtitle">Advanced Cybersecurity Platform with Face Recognition Authentication</p>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-fingerprint"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number">99.9</span>
+                            <span class="stat-label">Security Score</span>
+                        </div>
                     </div>
-                    <div class="rotating-shield shield-3 floating-3d">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number">0.3s</span>
+                            <span class="stat-label">Face Recognition</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number">256-bit</span>
+                            <span class="stat-label">Encryption</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <button class="btn btn-primary btn-large" onclick="openFCEAuth()">
                         <i class="fas fa-user-shield"></i>
-                    </div>
-                </div>
-                <div class="floating-icons">
-                    <div class="floating-icon icon-1">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="floating-icon icon-2">
-                        <i class="fas fa-terminal"></i>
-                    </div>
-                    <div class="floating-icon icon-3">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <div class="floating-icon icon-4">
-                        <i class="fas fa-fingerprint"></i>
-                    </div>
-                </div>
-                <div class="center-globe">
-                    <div class="globe-container">
-                        <div class="globe">
-                            <div class="globe-lines"></div>
-                            <div class="globe-dots"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="about">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-image">
-                        <div class="profile-card">
-                            <div class="profile-image-container">
-                                <img src="profile.jpg" alt="Profile" class="profile-image">
-                                <div class="profile-overlay">
-                                    <div class="social-icons">
-                                        <a href="#"><i class="fab fa-github"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="profile-info">
-                                <h3>Baraka DevX</h3>
-                                <p class="profile-title">Cybersecurity Expert & Developer</p>
-                                <div class="profile-stats">
-                                    <div class="stat">
-                                        <span class="number">50+</span>
-                                        <span class="label">Projects</span>
-                                    </div>
-                                    <div class="stat">
-                                        <span class="number">5+</span>
-                                        <span class="label">Years</span>
-                                    </div>
-                                    <div class="stat">
-                                        <span class="number">100%</span>
-                                        <span class="label">Success</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-text">
-                        <h2 class="section-title">About Me</h2>
-                        <div class="about-description">
-                            <p>Passionate cybersecurity expert and full-stack developer with extensive experience in building secure, scalable digital solutions. Specializing in advanced threat detection, network security, and innovative security tools development.</p>
-                            
-                            <div class="skills-section">
-                                <h3>Core Expertise</h3>
-                                <div class="skills-grid">
-                                    <div class="skill-item">
-                                        <i class="fas fa-shield-alt"></i>
-                                        <span>Cybersecurity</span>
-                                    </div>
-                                    <div class="skill-item">
-                                        <i class="fas fa-code"></i>
-                                        <span>Full-Stack Development</span>
-                                    </div>
-                                    <div class="skill-item">
-                                        <i class="fas fa-network-wired"></i>
-                                        <span>Network Security</span>
-                                    </div>
-                                    <div class="skill-item">
-                                        <i class="fas fa-brain"></i>
-                                        <span>AI/ML Integration</span>
-                                    </div>
-                                    <div class="skill-item">
-                                        <i class="fas fa-lock"></i>
-                                        <span>Encryption Systems</span>
-                                    </div>
-                                    <div class="skill-item">
-                                        <i class="fas fa-chart-line"></i>
-                                        <span>Security Analytics</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cta-section">
-                                <h3>Let's Work Together</h3>
-                                <p>Interested in collaboration or need cybersecurity expertise?</p>
-                                <div class="cta-buttons">
-                                    <button class="btn btn-primary" onclick="scrollToSection('portfolio')">
-                                        <i class="fas fa-briefcase"></i> View Portfolio
-                                    </button>
-                                    <button class="btn btn-outline" onclick="openContactModal()">
-                                        <i class="fas fa-envelope"></i> Contact Me
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <span>Access Secure Platform</span>
+                    </button>
                 </div>
             </div>
         </section>
 
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="portfolio">
+        <!-- Security Dashboard -->
+        <section class="security-dashboard">
             <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="portfolio-filters">
-                    <button class="filter-btn active" data-filter="all">All Projects</button>
-                    <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
-                    <button class="filter-btn" data-filter="web">Web Development</button>
-                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
-                    <button class="filter-btn" data-filter="ai">AI/ML</button>
-                </div>
-                <div class="portfolio-grid" id="portfolio-grid">
-                    <div class="portfolio-item" data-category="cybersecurity">
-                        <div class="portfolio-image">
-                            <div class="project-overlay">
-                                <div class="project-tech">
-                                    <span class="tech-tag">React</span>
-                                    <span class="tech-tag">Node.js</span>
-                                    <span class="tech-tag">MongoDB</span>
-                                </div>
-                            </div>
-                            <div class="project-number">01</div>
+                <h2 class="section-title">Security Dashboard</h2>
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <i class="fas fa-fingerprint"></i>
+                            <h3>Biometric Status</h3>
                         </div>
-                        <div class="portfolio-content">
-                            <h3>Advanced Threat Detection System</h3>
-                            <p>AI-powered cybersecurity platform with real-time threat intelligence and automated response capabilities.</p>
-                            <div class="project-stats">
-                                <div class="stat">
-                                    <i class="fas fa-users"></i>
-                                    <span>10K+ Users</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-star"></i>
-                                    <span>4.9 Rating</span>
-                                </div>
-                            </div>
-                            <div class="project-actions">
-                                <button class="btn btn-outline" onclick="openProjectDetails('threat-detection')">
-                                    <i class="fas fa-eye"></i> View Details
-                                </button>
-                                <a href="#" class="btn btn-primary">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                            </div>
+                        <div class="card-content">
+                            <div class="status-indicator online" id="bio-status"></div>
+                            <p>FCE Engine Active</p>
                         </div>
                     </div>
-
-                    <div class="portfolio-item" data-category="web">
-                        <div class="portfolio-image">
-                            <div class="project-overlay">
-                                <div class="project-tech">
-                                    <span class="tech-tag">Vue.js</span>
-                                    <span class="tech-tag">Firebase</span>
-                                    <span class="tech-tag">Tailwind</span>
-                                </div>
-                            </div>
-                            <div class="project-number">02</div>
+                                <div class="dashboard-card">
+                        <div class="card-header">
+                            <i class="fas fa-users"></i>
+                            <h3>Active Sessions</h3>
                         </div>
-                        <div class="portfolio-content">
-                            <h3>Enterprise Security Dashboard</h3>
-                            <p>Comprehensive security monitoring dashboard with real-time analytics and threat visualization.</p>
-                            <div class="project-stats">
-                                <div class="stat">
-                                    <i class="fas fa-building"></i>
-                                    <span>50+ Companies</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-shield-alt"></i>
-                                    <span>99.9% Uptime</span>
-                                </div>
-                            </div>
-                            <div class="project-actions">
+                        <div class="card-content">
+                            <span class="big-number" id="active-sessions">0</span>
+                            <p>Authenticated Users</p>
+                            <div class="card-actions">
                                 <button class="btn btn-outline" onclick="openProjectDetails('security-dashboard')">
-                                    <i class="fas fa-eye"></i> View Details
+                                    <i class="fas fa-eye"></i>
+                                    <span>View Details</span>
                                 </button>
                                 <a href="#" class="btn btn-primary">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Live Demo</span>
                                 </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Security Level</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="security-level">
+                                <div class="level-bar">
+                                    <div class="level-fill" style="width: 95%;"></div>
+                                </div>
+                                <span>Maximum</span>
                             </div>
                         </div>
                     </div>
@@ -1054,6 +706,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="cyber-script.js"></script>
+    <script src="cyber-fce-script.js"></script>
 </body>
 </html>
