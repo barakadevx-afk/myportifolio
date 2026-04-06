@@ -5,7 +5,7 @@ const SUPABASE_CONFIG = {
     database: {
         host: 'db.poyzhoxnvbfumgtcklia.supabase.co',
         user: 'postgres',
-        password: 'YOUR-PASSWORD',
+        password: 'Baraka@2050!!!',
         database: 'postgres',
         port: 5432,
         ssl: true

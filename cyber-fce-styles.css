@@ -6,6 +6,9 @@
     --military-primary: #1a1a2a;
     --military-secondary: #2d3748;
     --military-accent: #ff4444;
+    --rdf-primary: #0066cc;
+    --rdf-secondary: #003d7a;
+    --rdf-accent: #ff0000;
     --dark-bg: #0a0a0a;
     --card-bg: rgba(255, 255, 255, 0.05);
     --text-primary: #ffffff;
@@ -19,6 +22,8 @@
     --gradient-accent: linear-gradient(135deg, var(--accent-color), var(--primary-color));
     --military-gradient: linear-gradient(135deg, var(--military-primary), var(--military-secondary));
     --military-gradient-accent: linear-gradient(135deg, var(--military-accent), var(--military-primary));
+    --rdf-gradient: linear-gradient(135deg, var(--rdf-primary), var(--rdf-secondary));
+    --rdf-gradient-accent: linear-gradient(135deg, var(--rdf-accent), var(--rdf-primary));
 }
 
 * {
@@ -141,7 +146,7 @@ body {
 
 .auth-container {
     background: var(--card-bg);
-    border: 2px solid var(--military-primary);
+    border: 2px solid var(--rdf-primary);
     border-radius: var(--border-radius-large);
     padding: 3rem;
     max-width: 400px;
@@ -158,7 +163,7 @@ body {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: var(--military-gradient);
+    background: var(--rdf-gradient);
     border-radius: var(--border-radius-large);
     z-index: -1;
     animation: borderGlow 3s ease-in-out infinite;
@@ -435,7 +440,7 @@ body {
 }
 
 .btn-primary {
-    background: var(--military-gradient);
+    background: var(--rdf-gradient);
     color: var(--dark-bg);
     box-shadow: var(--shadow-primary);
 }
@@ -446,13 +451,13 @@ body {
 }
 
 .btn-secondary {
-    background: var(--military-gradient-accent);
+    background: var(--rdf-gradient-accent);
     color: var(--dark-bg);
-    border: 2px solid var(--military-primary);
+    border: 2px solid var(--rdf-primary);
 }
 
 .btn-secondary:hover {
-    background: rgba(26, 55, 88, 0.1);
+    background: rgba(0, 102, 204, 0.1);
     transform: translateY(-2px);
 }
 

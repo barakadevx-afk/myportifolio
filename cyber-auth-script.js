@@ -1,5 +1,5 @@
-// Baraka DevX - Military Cybersecurity Platform with Simple Authentication
-class MilitaryAuth {
+// RDF Baraka DevX - Rwanda Defence Force Cybersecurity Platform
+class RDFMilitaryAuth {
     constructor() {
         this.isAuthenticated = false;
         this.currentUser = null;
@@ -10,7 +10,7 @@ class MilitaryAuth {
         this.setupEventListeners();
         this.initializeBackground();
         this.startSecurityMonitoring();
-        console.log('MilitaryAuth: Advanced military cybersecurity platform initialized');
+        console.log('RDFMilitaryAuth: Rwanda Defence Force cybersecurity platform initialized');
     }
 
     setupEventListeners() {
@@ -366,12 +366,13 @@ class MilitaryAuth {
     }
 }
 
-// Initialize Military Auth platform
-const militaryAuth = new MilitaryAuth();
+// Initialize RDF Military Auth platform
+const rdfMilitaryAuth = new RDFMilitaryAuth();
 
 // Make functions globally accessible
-window.openAuth = () => militaryAuth.openAuth();
-window.handleLogin = (event) => militaryAuth.handleLogin(event);
-window.closeModal = (modalId) => militaryAuth.closeModal(modalId);
-window.openProjectDetails = (projectId) => militaryAuth.openProjectDetails(projectId);
-window.scrollToSection = (sectionId) => militaryAuth.scrollToSection(sectionId);
+window.openAuth = () => rdfMilitaryAuth.openAuth();
+window.handleLogin = (event) => rdfMilitaryAuth.handleLogin(event);
+window.closeModal = (modalId) => rdfMilitaryAuth.closeModal(modalId);
+window.openProjectDetails = (projectId) => rdfMilitaryAuth.openProjectDetails(projectId);
+window.scrollToSection = (sectionId) => rdfMilitaryAuth.scrollToSection(sectionId);
+window.testButton = () => rdfMilitaryAuth.testButton();
