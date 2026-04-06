@@ -20,6 +20,10 @@ class MilitaryAuth {
         window.closeModal = (modalId) => this.closeModal(modalId);
         window.openProjectDetails = (projectId) => this.openProjectDetails(projectId);
         window.scrollToSection = (sectionId) => this.scrollToSection(sectionId);
+        window.testButton = () => this.testButton();
+        
+        // Test button functionality
+        console.log('MilitaryAuth: Setting up button listeners...');
         
         // Add click listeners to all buttons
         this.addClickListeners();
@@ -94,6 +98,9 @@ class MilitaryAuth {
         const modal = document.getElementById('auth-modal');
         if (modal) {
             modal.style.display = 'flex';
+            modal.classList.add('active');
+        } else {
+            console.error('MilitaryAuth: Modal not found');
         }
     }
 
@@ -201,6 +208,19 @@ class MilitaryAuth {
 
     openProjectDetails(projectId) {
         this.showNotification(`Opening project details for ${projectId}`, 'info');
+    }
+
+    testButton() {
+        console.log('Test button clicked!');
+        this.showNotification('Test button is working!', 'success');
+        
+        // Test modal functionality
+        this.openAuth();
+        
+        // Test notification system
+        setTimeout(() => {
+            this.showNotification('Button functionality test complete!', 'info');
+        }, 2000);
     }
 
     showNotification(message, type = 'info') {
